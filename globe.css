@@ -1,0 +1,110 @@
+header,footer{
+	background:linear-gradient(#70AD47,black);
+	color: white;
+}
+.position{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#ombre{
+	box-shadow: 6px 6px 6px black;
+}
+#ronde{
+	border: 3;
+	border-radius: 10px;
+}
+.posi{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	
+}
+
+input.foo{
+	padding: 5px;
+	background: #70AD47;
+	-webkit-transition:background;
+
+	-webkit-transition-duration:0.6s;
+	-webkit-transition-timing-function:ease;
+
+
+}
+/*hover est la transition */
+input.foo:hover{
+	background:#ff8000;
+}
+
+input{
+	background:linear-gradient(#ff8000,#70AD47,black);
+	color: white;
+	border-color:(#70AD47,#ff8000);
+	-webkit-transition:background 0.3s ease;
+}
+.defile{
+
+	width: 500px;
+	overflow: hidden;
+	border: 0px solid white;
+}
+.image{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	animation-duration: 20s;
+	animation-name: animations;
+	animation-iteration-count: infinite;
+}
+
+/*key est comme le main c est la qu on appelle la fonction animation afin qu il marche*/
+/*animation-iteration-count: infinite; permet de determiner le nombre de fois que l animation aura lieu par temps t*/
+
+@keyframes animations{
+	0%{
+		transform: translateX(0);
+	}
+		25%{
+		transform: translateX(-200px);
+		}
+		50%{
+		transform: translateX(-200px);
+		}
+		75%{
+		transform: translateX(-200px);
+		}
+		100%{
+		transform: translateX(0);
+		}
+
+
+}
+h1{
+	background:linear-gradient( #ff8000,black);
+	border-radius: 70px;
+}
+
+
+.rotation{
+	
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-bottom: 30px;
+	border-radius: 170px;
+	width: 300px;
+	height: 300px;
+	background-image: url("pollution lumineuse.jpg");
+	/* shadow permet de creer les ombres et animation de donner un nom au key*/
+	box-shadow: -20px -20px 50px 2px black inset,0 0 20px 2px black;
+	animation: roter 30s linear infinite;
+}
+@keyframes roter {
+	100%{background-position: 100%;}
+}
+
+a:hover img{
+	-webkit-transform:scale(1.5);
+}
